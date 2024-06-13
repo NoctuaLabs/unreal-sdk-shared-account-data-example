@@ -4,7 +4,7 @@ const fs = require('fs');
 fs.readFile('AccountData', 'utf8', (err, data) => {
     if (err) throw err;
 
-    const parsedData = JSON.parse(data);
+    const parsedData = JSON.parse(data.trim());
     const rawDataSize = parsedData.rawDataSize;
     const encryptedBase64 = parsedData.encryptedBase64;
 
